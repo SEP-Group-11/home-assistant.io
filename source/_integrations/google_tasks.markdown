@@ -37,6 +37,8 @@ You can use to-do lists in automations, such as adding a new task when Home Assi
 a device has low batteries. When you combine with a Home Assistant voice assistant, you can
 manage your Google Tasks by saying something like *Add clean out garage to personal task list*.
 
+The integration also shows the tasks with deadlines in the [Calendar](/integrations/calendar) view.
+
 ## Prerequisites
 
 You need to configure developer credentials to allow Home Assistant to access your Google Account.
@@ -71,7 +73,7 @@ list. A to-do list item supports the following fields:
 - **Description**: The Google Tasks *Details* field.
 - **Status**: The Google Tasks *Completed* check box corresponds to the to-do list
   status `needs_action` when not checked and `completed` when checked.
-
+- **Parent**: The parent of the task. This is the Google Tasks *Parent* field. Which is used to support subtasks.
 
 ## Actions
 
@@ -126,7 +128,7 @@ OAuth credentials in the Google Cloud console.
 
 To resolve this issue:
 
-1. Follow the instructions in [Application Credentials](/integrations/application_credentials/#deleting-application-credentials) to remove any existing credentials.  
+1. Follow the instructions in [Application Credentials](/integrations/application_credentials/#deleting-application-credentials) to remove any existing credentials.
 1. Follow the steps above in the [Prerequisites](#prerequisites).
 1. Follow the steps above in the [Configuration](#configuration).
 
